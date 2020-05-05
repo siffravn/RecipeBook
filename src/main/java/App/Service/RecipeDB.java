@@ -31,7 +31,7 @@ public class RecipeDB {
 
     public Recipe getRecipe(int index){
 
-        if (index >= recipes.size()) throw new RecipeNotFoundException("Recipe " + index + " not found");
+        if (index >= recipes.size()) throw new RecipeNotFoundException();
 
         else return recipes.get(index);
     }
