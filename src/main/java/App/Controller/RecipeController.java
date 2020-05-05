@@ -3,6 +3,7 @@ package App.Controller;
 import App.MockData.RecipeDB;
 import App.Model.Recipe;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -11,7 +12,8 @@ import java.util.ArrayList;
 @RequestMapping("recipes")
 public class RecipeController {
 
-    RecipeDB recipeDB = RecipeDB.getInstance();
+    @Autowired
+    RecipeDB recipeDB;
 
     @GetMapping("")
     public ArrayList<Recipe> getRecipes(){

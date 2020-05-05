@@ -1,9 +1,11 @@
 package App.MockData;
 
 import App.Model.Recipe;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class RecipeDB {
 
     private ArrayList<Recipe> recipes;
