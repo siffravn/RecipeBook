@@ -1,6 +1,6 @@
 package App.Controller;
 
-import App.MockData.RecipeDB;
+import App.Service.RecipeDB;
 import App.Model.Recipe;
 
 import org.springframework.beans.factory.annotation.Autowired;

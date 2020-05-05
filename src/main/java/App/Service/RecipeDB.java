@@ -1,4 +1,4 @@
-package App.MockData;
+package App.Service;
 
 import App.Model.Recipe;
 import org.springframework.stereotype.Service;
