@@ -1,5 +1,6 @@
 package App.Service;
 
+import App.Exception.RecipeNotFoundException;
 import App.Model.Recipe;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +30,10 @@ public class RecipeDB {
     }
 
     public Recipe getRecipe(int index){
-        return recipes.get(index);
+
+        if (index >= recipes.size()) throw new RecipeNotFoundException("Recipe " + index + " not found");
+
+        else return recipes.get(index);
     }
 
     public void add(Recipe recipe) {
