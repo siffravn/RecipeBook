@@ -29,4 +29,12 @@ public class RecipeDB {
     public Recipe getRecipe(int index){
         return recipes.get(index);
     }
+
+    public void add(Recipe recipe) {
+        recipes.add(recipe);
+    }
+
+    public void setRecipes(ArrayList<Recipe> recipes) {
+        this.recipes = recipes;
+    }
 }
