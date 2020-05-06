@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "d797ff67-119a-4b43-a72b-58fa6bb76b34",
+		"name": "RecipeBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recipe List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3344/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3344",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A recipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3344/recipes/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3344",
+					"path": [
+						"recipes",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A recipe - Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3344/recipes/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3344",
+					"path": [
+						"recipes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3344",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3344"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a recipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test\",\r\n    \"description\": \"Very not tasty\",\r\n    \"imageURL\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3344/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3344",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update recipe list",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Test Recipe 1\",\r\n        \"description\": \"Description 1\",\r\n        \"imageURL\": \"https://res.cloudinary.com/dk2ghb1pg/image/upload/v1535301733/bxoyfrkj4zwtbsewcryf.png\"\r\n    },\r\n    {\r\n        \"name\": \"Test Recipe 2\",\r\n        \"description\": \"Description 2\",\r\n        \"imageURL\": \"https://wow.olympus.eu/webfile/img/1632/oly_testwow_stage.jpg?x=1024\"\r\n    },\r\n    {\r\n        \"name\": \"Test Recipe 3\",\r\n        \"description\": \"Description 3\",\r\n        \"imageURL\": \"https://dreamix.eu/blog/wp-content/uploads/2017/05/20150224test644-1508x706_c.jpg\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3344/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3344",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
